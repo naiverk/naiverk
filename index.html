@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Naiverk comparte tips, trucos, guías paso a paso y tutoriales de Roblox para ayudarte a dominar tus juegos favoritos." />
+  <meta name="keywords" content="Naiverk, Roblox, tutoriales Roblox, trucos Roblox, códigos Roblox, guías gaming, tips videojuegos" />
+  <meta name="author" content="José (Naiverk)" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0F1015" />
+  <link rel="canonical" href="https://naiverk.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Naiverk | Tips y tutoriales de Roblox" />
+  <meta property="og:description" content="Guías, trucos y tutoriales épicos de Roblox por Naiverk." />
+  <meta property="og:url" content="https://naiverk.com/" />
+  <meta property="og:site_name" content="Naiverk" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Naiverk | Tips y tutoriales de Roblox" />
+  <meta name="twitter:description" content="Descubre guías, trucos y tutoriales de Roblox para subir de nivel." />
+  <link rel="icon" type="image/jpeg" href="imagenes/Naiverk.jpg" />
+  <meta property="og:image" content="https://naiverk.com/imagenes/Naiverk.jpg" />
+  <title>Naiverk | Tips y tutoriales de Roblox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { cyber: '#0F1015', panel: '#181920', lime: '#76D700', electric: '#0077FF', visor: '#A124DB' },
+          fontFamily: { display: ['Orbitron', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"José","alternateName":"Naiverk","url":"https://naiverk.com/","description":"Creador de contenido especializado en tips, trucos y tutoriales de Roblox.","sameAs":["https://www.youtube.com/channel/UC2KxmyZzHYgysLRx-b8J8Wg"]}
+  </script>
+  <style>
+    :root { --cyber: #0f1015; --panel: #181920; --lime: #76d700; --muted: #9ca3af; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cyber); color: #fff; font-family: Inter, sans-serif; overflow-x: hidden; }
+    .font-display { font-family: Orbitron, sans-serif; }
+    .text-glow { text-shadow: 0 0 24px rgba(118, 215, 0, .5); }
+    .lime-glow { box-shadow: 0 0 0 1px rgba(118,215,0,.25), 0 0 26px rgba(118,215,0,.1); }
+    .lime-glow:hover { box-shadow: 0 0 0 1px rgba(118,215,0,.65), 0 0 30px rgba(118,215,0,.28); }
+    .grid-bg { background-image: linear-gradient(rgba(118,215,0,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(118,215,0,.055) 1px, transparent 1px); background-size: 52px 52px; }
+    .hero-wash { background: radial-gradient(circle at 78% 32%, rgba(0,119,255,.17), transparent 28%), radial-gradient(circle at 48% 80%, rgba(161,36,219,.11), transparent 24%); }
+    .glass { background: linear-gradient(140deg, rgba(24,25,32,.86), rgba(15,16,21,.72)); border: 1px solid rgba(118,215,0,.16); backdrop-filter: blur(14px); }
+    .reveal { animation: rise .8s both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: .12s; } .delay-2 { animation-delay: .24s; } .delay-3 { animation-delay: .36s; }
+    .scanline { position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, transparent 0, transparent 3px, rgba(255,255,255,.012) 4px); }
+    .video-thumb { aspect-ratio: 16 / 9; object-fit: cover; }
+    .menu-open { display: flex !important; }
+    .story-panel { animation: story-in .35s ease-out both; }
+    @keyframes story-in { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: translateX(0); } }
+    input, select, textarea { color-scheme: dark; }
+  </style>
+</head>
+<body>
+  <header class="fixed top-0 z-50 w-full border-b border-white/5 bg-cyber/80 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navegación principal">
+      <a href="#inicio" class="font-display text-xl font-bold tracking-widest text-lime text-glow">NAIVERK<span class="text-white">_</span></a>
+      <button id="menu-button" class="text-white md:hidden" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars text-xl"></i></button>
+      <div id="nav-menu" class="absolute left-0 top-full hidden w-full flex-col gap-5 border-b border-white/10 bg-cyber px-5 py-6 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0">
+        <a class="nav-link text-sm text-gray-400 transition hover:text-lime" href="#inicio">Inicio</a>
+        <a class="nav-link text-sm text-gray-400 transition hover:text-lime" href="#sobre-mi">Sobre mí</a>
+        <a class="nav-link text-sm text-gray-400 transition hover:text-lime" href="#videos">Videos</a>
+        <a class="nav-link text-sm text-gray-400 transition hover:text-lime" href="#redes">Redes</a>
+        <a class="nav-link text-sm text-gray-400 transition hover:text-lime" href="#contacto">Contacto</a>
+        <a href="https://www.youtube.com/channel/UC2KxmyZzHYgysLRx-b8J8Wg?sub_confirmation=1" target="_blank" rel="noreferrer" class="rounded-md bg-lime px-4 py-2 text-sm font-bold text-cyber transition hover:bg-white hover:shadow-[0_0_24px_rgba(118,215,0,.5)]"><i class="fa-brands fa-youtube mr-2"></i>Suscribirse</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-wash grid-bg relative flex min-h-screen items-center overflow-hidden pt-24">
+      <div class="scanline"></div>
+      <div class="mx-auto grid w-full max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
+        <div class="relative z-10 max-w-3xl">
+          <div class="reveal mb-7 inline-flex items-center gap-2 rounded-full border border-lime/30 bg-lime/10 px-4 py-2 text-xs font-semibold text-lime"><span class="h-2 w-2 animate-pulse rounded-full bg-lime"></span>🎮 Especialista en Roblox &amp; Gaming Tips</div>
+          <p class="reveal delay-1 mb-4 font-display text-xs font-bold tracking-[.28em] text-electric">NIVEL UP // NAIVERK</p>
+          <h1 class="reveal delay-1 font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">Domina <span class="text-lime text-glow">Roblox</span><br />y tus juegos<br />favoritos<span class="text-electric">.</span></h1>
+          <p class="reveal delay-2 mt-7 max-w-xl text-lg leading-relaxed text-gray-400">Tips, trucos, guías y tutoriales épicos para jugar más inteligente, descubrir secretos y subir de nivel. Más de 20.000 jugadores ya forman parte de la aventura.</p>
+          <div class="reveal delay-3 mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#videos" class="rounded-md bg-lime px-6 py-3.5 text-center text-sm font-bold text-cyber transition hover:bg-white hover:shadow-[0_0_28px_rgba(118,215,0,.45)]"><i class="fa-solid fa-play mr-2"></i>Ver últimos videos</a>
+            <a href="#redes" class="rounded-md border border-white/15 bg-white/5 px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:border-lime/60 hover:text-lime"><i class="fa-brands fa-discord mr-2"></i>Comunidad Discord / Redes</a>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-md">
+          <div class="absolute -inset-10 rounded-full bg-electric/10 blur-3xl"></div>
+          <div class="glass relative overflow-hidden rounded-2xl p-3 lime-glow">
+            <div class="absolute left-6 top-6 z-10 rounded border border-lime/40 bg-cyber/80 px-2 py-1 font-display text-[10px] tracking-[.25em] text-lime">PLAYER_01</div>
+            <img src="imagenes/Naiverk.jpg" alt="Avatar oficial de Naiverk con visor futurista" width="600" height="600" fetchpriority="high" class="relative z-0 aspect-square w-full rounded-xl object-cover" />
+            <div class="absolute bottom-6 left-6 right-6 z-10 flex items-center justify-between rounded-lg border border-white/15 bg-cyber/80 px-4 py-3 backdrop-blur-md"><span class="font-display text-sm tracking-widest text-white">NAIVERK</span><span class="text-xs text-lime"><i class="fa-solid fa-circle mr-1 text-[8px]"></i>ONLINE</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="border-t border-white/5 bg-panel/40 py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+          <div><p class="mb-4 font-display text-xs tracking-[.25em] text-lime">01 // SOBRE MÍ</p><h2 class="font-display text-3xl font-bold sm:text-4xl">Una historia hecha<br /><span class="text-lime">de curiosidad.</span></h2></div>
+          <div class="space-y-5 text-base leading-8 text-gray-400"><p>José, más conocido como <strong class="font-semibold text-white">Naiverk</strong>, es un creador de contenido que ha dejado una huella significativa en la comunidad de Roblox. Desde mayo de 2018, convierte conceptos complejos en explicaciones sencillas, detalladas y útiles.</p><p>Su contenido nació explorando eventos y recompensas, y evolucionó hasta convertirse en una biblioteca de tutoriales, códigos, Shorts y guías atemporales para miles de jugadores.</p></div>
+        </div>
+        <div class="mt-14 grid gap-4 sm:grid-cols-3"><div class="glass rounded-xl p-6 transition duration-300 hover:-translate-y-1 hover:border-lime/60 lime-glow"><i class="fa-solid fa-user-group text-2xl text-lime"></i><p class="mt-8 font-display text-3xl font-bold">+20.000</p><p class="mt-2 text-sm text-gray-500">Suscriptores</p></div><div class="glass rounded-xl p-6 transition duration-300 hover:-translate-y-1 hover:border-electric/60 lime-glow"><i class="fa-solid fa-film text-2xl text-electric"></i><p class="mt-8 font-display text-3xl font-bold">+500</p><p class="mt-2 text-sm text-gray-500">Vídeos publicados</p></div><div class="glass rounded-xl p-6 transition duration-300 hover:-translate-y-1 hover:border-visor/60 lime-glow"><i class="fa-solid fa-chart-line text-2xl text-visor"></i><p class="mt-8 font-display text-3xl font-bold">+3M</p><p class="mt-2 text-sm text-gray-500">Visitas acumuladas</p></div></div>
+        <div class="mt-16 grid gap-8 lg:grid-cols-[.28fr_.72fr]">
+          <div class="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2" role="tablist" aria-label="Línea de tiempo de Naiverk">
+            <button class="story-tab whitespace-nowrap rounded-md border border-lime/60 bg-lime/10 px-4 py-3 text-left text-sm font-bold text-lime lg:block lg:w-full" data-year="2018" role="tab" aria-selected="true">2018 <span class="ml-2 text-xs font-normal text-gray-500">El inicio</span></button>
+            <button class="story-tab whitespace-nowrap rounded-md border border-transparent px-4 py-3 text-left text-sm font-bold text-gray-500 transition hover:border-white/10 hover:text-white lg:block lg:w-full" data-year="2019" role="tab" aria-selected="false">2019 <span class="ml-2 text-xs font-normal">Edición</span></button>
+            <button class="story-tab whitespace-nowrap rounded-md border border-transparent px-4 py-3 text-left text-sm font-bold text-gray-500 transition hover:border-white/10 hover:text-white lg:block lg:w-full" data-year="2020" role="tab" aria-selected="false">2020 <span class="ml-2 text-xs font-normal">Enfoque</span></button>
+            <button class="story-tab whitespace-nowrap rounded-md border border-transparent px-4 py-3 text-left text-sm font-bold text-gray-500 transition hover:border-white/10 hover:text-white lg:block lg:w-full" data-year="2021" role="tab" aria-selected="false">2021 <span class="ml-2 text-xs font-normal">Despegue</span></button>
+            <button class="story-tab whitespace-nowrap rounded-md border border-transparent px-4 py-3 text-left text-sm font-bold text-gray-500 transition hover:border-white/10 hover:text-white lg:block lg:w-full" data-year="2022" role="tab" aria-selected="false">2022 <span class="ml-2 text-xs font-normal">Pausa</span></button>
+            <button class="story-tab whitespace-nowrap rounded-md border border-transparent px-4 py-3 text-left text-sm font-bold text-gray-500 transition hover:border-white/10 hover:text-white lg:block lg:w-full" data-year="actualidad" role="tab" aria-selected="false">Hoy <span class="ml-2 text-xs font-normal">Evolución</span></button>
+          </div>
+          <div id="story-content" class="glass story-panel rounded-xl p-7 sm:p-9" role="tabpanel"><p class="font-display text-xs tracking-[.25em] text-lime">MAYO DE 2018 // INICIO</p><h3 class="mt-5 font-display text-2xl font-bold">Todo empezó con una curiosidad.</h3><p class="mt-5 max-w-3xl leading-8 text-gray-400">Inspirado por Betroner y Noangy, Naiverk comenzó explorando eventos y recompensas dentro de Roblox. Aunque grabar y editar con recursos limitados fue un reto, su perseverancia y conocimiento del juego le permitieron aprender rápido y crear contenido cada vez más útil.</p><div class="mt-8 flex items-center gap-3 text-sm text-gray-500"><i class="fa-solid fa-gamepad text-lime"></i> Primeras guías y eventos de Roblox</div></div>
+        </div>
+        <div class="mt-16 border-t border-white/10 pt-10"><p class="font-display text-xs tracking-[.25em] text-lime">DETALLES DEL AVATAR</p><div class="mt-5 grid gap-6 text-sm leading-7 text-gray-400 md:grid-cols-2"><p><strong class="text-white">Alter ego:</strong> una mezcla de lo tecnológico y lo humano que refleja una personalidad creativa y geek.</p><p><strong class="text-white">Dato curioso:</strong> en sus últimos tutoriales sorprendió a su comunidad al revelar su voz.</p></div></div>
+      </div>
+    </section>
+
+    <section id="videos" class="py-24"><div class="mx-auto max-w-7xl px-5 lg:px-8"><div class="flex flex-wrap items-end justify-between gap-5"><div><p class="mb-4 font-display text-xs tracking-[.25em] text-lime">02 // CONTENIDO</p><h2 class="font-display text-3xl font-bold sm:text-4xl">🎥 ÚLTIMOS SUBIDOS</h2></div><a href="https://www.youtube.com/channel/UC2KxmyZzHYgysLRx-b8J8Wg/videos" target="_blank" rel="noreferrer" class="text-sm font-semibold text-lime transition hover:text-white">Ver canal completo <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a></div><div id="video-grid" class="mt-12 grid gap-6 md:grid-cols-3" aria-live="polite"></div></div></section>
+
+    <section id="redes" class="border-y border-white/5 bg-panel/40 py-24"><div class="mx-auto max-w-7xl px-5 lg:px-8"><p class="mb-4 font-display text-xs tracking-[.25em] text-lime">03 // CONECTA</p><div class="flex flex-wrap items-end justify-between gap-6"><h2 class="font-display text-3xl font-bold sm:text-4xl">La partida continúa<br /><span class="text-gray-500">fuera de YouTube.</span></h2><p class="max-w-sm text-sm leading-7 text-gray-500">Noticias, clips, secretos y una comunidad que siempre está lista para la siguiente partida.</p></div><div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"><a href="https://www.youtube.com/channel/UC2KxmyZzHYgysLRx-b8J8Wg" target="_blank" rel="noreferrer" class="glass rounded-xl p-5 transition hover:-translate-y-1 hover:border-red-500/50"><i class="fa-brands fa-youtube text-2xl text-red-500"></i><p class="mt-7 font-semibold">YouTube</p><p class="mt-1 text-xs text-gray-500">Videos largos</p></a><a href="#contacto" aria-label="Solicitar enlace de TikTok" class="glass rounded-xl p-5 transition hover:-translate-y-1 hover:border-white/40"><i class="fa-brands fa-tiktok text-2xl text-white"></i><p class="mt-7 font-semibold">TikTok</p><p class="mt-1 text-xs text-gray-500">Clips rápidos</p></a><a href="#contacto" aria-label="Solicitar enlace de Discord" class="glass rounded-xl p-5 transition hover:-translate-y-1 hover:border-indigo-400/60"><i class="fa-brands fa-discord text-2xl text-indigo-400"></i><p class="mt-7 font-semibold">Discord</p><p class="mt-1 text-xs text-gray-500">Únete al squad</p></a><a href="#contacto" aria-label="Solicitar enlace de Twitter o X" class="glass rounded-xl p-5 transition hover:-translate-y-1 hover:border-sky-400/60"><i class="fa-brands fa-x-twitter text-2xl text-sky-400"></i><p class="mt-7 font-semibold">Twitter / X</p><p class="mt-1 text-xs text-gray-500">Updates diarios</p></a><a href="#contacto" aria-label="Solicitar enlace de Instagram" class="glass rounded-xl p-5 transition hover:-translate-y-1 hover:border-pink-400/60"><i class="fa-brands fa-instagram text-2xl text-pink-400"></i><p class="mt-7 font-semibold">Instagram</p><p class="mt-1 text-xs text-gray-500">Detrás de cámara</p></a></div></div></section>
+
+    <section id="contacto" class="py-24"><div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8"><div><p class="mb-4 font-display text-xs tracking-[.25em] text-lime">04 // CONTACTO</p><h2 class="font-display text-3xl font-bold sm:text-4xl">¿Creamos algo<br /><span class="text-lime">épico?</span></h2><p class="mt-6 max-w-sm text-sm leading-7 text-gray-500">Para colaboraciones, negocios o simplemente una pregunta, deja tu mensaje. Te leo.</p></div><form id="contact-form" class="glass rounded-xl p-6 sm:p-8"><div class="grid gap-5 sm:grid-cols-2"><label class="text-sm text-gray-400">Nombre<input required name="name" class="mt-2 w-full rounded-md border border-white/10 bg-cyber px-4 py-3 text-sm outline-none transition focus:border-lime" placeholder="Tu nombre" /></label><label class="text-sm text-gray-400">Email<input required type="email" name="email" class="mt-2 w-full rounded-md border border-white/10 bg-cyber px-4 py-3 text-sm outline-none transition focus:border-lime" placeholder="tu@email.com" /></label></div><label class="mt-5 block text-sm text-gray-400">Asunto<select name="subject" class="mt-2 w-full rounded-md border border-white/10 bg-cyber px-4 py-3 text-sm outline-none focus:border-lime"><option>Colaboración</option><option>Negocios</option><option>Pregunta</option></select></label><label class="mt-5 block text-sm text-gray-400">Mensaje<textarea required name="message" rows="5" class="mt-2 w-full resize-y rounded-md border border-white/10 bg-cyber px-4 py-3 text-sm outline-none transition focus:border-lime" placeholder="Cuéntame tu idea..."></textarea></label><div class="mt-6 flex flex-wrap items-center gap-4"><button class="rounded-md bg-lime px-6 py-3 text-sm font-bold text-cyber transition hover:bg-white hover:shadow-[0_0_28px_rgba(118,215,0,.45)]" type="submit"><i class="fa-solid fa-paper-plane mr-2"></i>Enviar mensaje</button><span id="form-status" class="text-sm text-lime" role="status"></span></div></form></div></section>
+  </main>
+
+  <footer class="border-t border-white/5 py-8"><div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 text-xs text-gray-600 sm:flex-row lg:px-8"><p>© 2026 Naiverk. Todos los derechos reservados.</p><a href="#inicio" class="text-gray-400 transition hover:text-lime">Volver arriba <i class="fa-solid fa-arrow-up ml-1"></i></a></div></footer>
+
+  <script>
+    const YOUTUBE_API_KEY = 'AIzaSyBAu2KfRw0Ms8PIaULD5gdjrmGCpDrPmVo';
+    const CHANNEL_ID = 'UC2KxmyZzHYgysLRx-b8J8Wg';
+    const videoGrid = document.querySelector('#video-grid');
+    const storyContent = document.querySelector('#story-content');
+    const storyData = {
+      '2018': { label: 'MAYO DE 2018 // INICIO', title: 'Todo empezó con una curiosidad.', text: 'Inspirado por Betroner y Noangy, Naiverk comenzó explorando eventos y recompensas dentro de Roblox. Aunque grabar y editar con recursos limitados fue un reto, su perseverancia y conocimiento del juego le permitieron aprender rápido y crear contenido cada vez más útil.', detail: 'Primeras guías y eventos de Roblox', icon: 'fa-gamepad' },
+      '2019': { label: '2019 // APRENDER HACIENDO', title: 'La edición se convirtió en otra aventura.', text: 'Durante sus vacaciones escolares realizó un curso básico de Adobe Premiere Pro. Después continuó aprendiendo de forma autodidacta con tutoriales y herramientas como Camtasia Studio y Vegas Pro, aprovechando al máximo una computadora de prestaciones básicas.', detail: 'De Premiere Pro a una edición autodidacta', icon: 'fa-scissors' },
+      '2020': { label: '2020 // ENFOQUE', title: 'Encontrar el nicho que encajaba.', text: 'Naiverk amplió sus conocimientos de diseño gráfico y comenzó a crear miniaturas más llamativas con Adobe Photoshop. Ese año eligió enfocarse exclusivamente en tutoriales de Roblox y dejó atrás Fortnite, consolidando una audiencia más especializada.', detail: 'Tutoriales de Roblox como nueva misión', icon: 'fa-crosshairs' },
+      '2021': { label: '2021 // DESPEGUE', title: 'El año que llevó el canal a otro nivel.', text: 'La cobertura del evento Metaverse Champions atrajo a miles de nuevos suscriptores. Sus tutoriales claros y precisos se volvieron una referencia para conseguir los cofres del evento. También llegó la monetización y nacieron contenidos sobre códigos y Shorts.', detail: 'Metaverse Champions, códigos y Shorts', icon: 'fa-rocket' },
+      '2022': { label: 'MAYO DE 2022 // PAUSA', title: 'También crecer significa saber parar.', text: 'Tras una etapa de publicar dos o más videos al día, Naiverk tomó un año sabático para cuidar su salud mental, enfocarse en su desarrollo personal y académico, y replantear sus objetivos. La pausa fue parte importante de su historia.', detail: 'Un descanso consciente después del burnout', icon: 'fa-pause' },
+      actualidad: { label: 'ACTUALIDAD // EVOLUCIÓN', title: 'Una comunidad que sigue conectada.', text: 'Aunque su presencia es más ocasional, Naiverk continúa compartiendo breves videos relacionados con Roblox y comunicándose con su audiencia. En 2023 también se animó a interactuar con jugadores de todo el mundo en una transmisión nocturna.', detail: 'Contenido ocasional, voz propia y comunidad global', icon: 'fa-satellite-dish' }
+    };
+    const fallbackVideos = [
+      { id: 'fallback-1', title: 'Los mejores trucos para avanzar más rápido en Roblox', publishedAt: 'Contenido reciente', thumbnail: 'https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg' },
+      { id: 'fallback-2', title: 'Secretos y consejos que todo jugador debe conocer', publishedAt: 'Guía de la comunidad', thumbnail: 'https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg' },
+      { id: 'fallback-3', title: 'Tutorial fácil: domina tu próxima partida', publishedAt: 'Tutorial semanal', thumbnail: 'https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg' }
+    ];
+
+    function formatDate(date) {
+      return new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(date));
+    }
+
+    function selectStory(year) {
+      const story = storyData[year];
+      if (!story) return;
+      document.querySelectorAll('.story-tab').forEach((tab) => {
+        const active = tab.dataset.year === year;
+        tab.classList.toggle('border-lime/60', active);
+        tab.classList.toggle('bg-lime/10', active);
+        tab.classList.toggle('text-lime', active);
+        tab.classList.toggle('border-transparent', !active);
+        tab.classList.toggle('text-gray-500', !active);
+        tab.setAttribute('aria-selected', active);
+      });
+      storyContent.classList.remove('story-panel');
+      void storyContent.offsetWidth;
+      storyContent.classList.add('story-panel');
+      storyContent.innerHTML = `<p class="font-display text-xs tracking-[.25em] text-lime">${story.label}</p><h3 class="mt-5 font-display text-2xl font-bold">${story.title}</h3><p class="mt-5 max-w-3xl leading-8 text-gray-400">${story.text}</p><div class="mt-8 flex items-center gap-3 text-sm text-gray-500"><i class="fa-solid ${story.icon} text-lime"></i> ${story.detail}</div>`;
+    }
+
+    function renderVideos(videos) {
+      videoGrid.innerHTML = videos.map((video) => {
+        const link = video.id.startsWith('fallback') ? `https://www.youtube.com/channel/${CHANNEL_ID}/videos` : `https://www.youtube.com/watch?v=${video.id}`;
+        return `<article class="glass overflow-hidden rounded-xl transition duration-300 hover:-translate-y-1 hover:border-lime/60 lime-glow"><img class="video-thumb w-full bg-black" src="${video.thumbnail}" alt="Miniatura: ${video.title}" loading="lazy" onerror="this.src='https://placehold.co/640x360/181920/76d700?text=NAIVERK'" /><div class="p-5"><p class="text-xs font-medium uppercase tracking-wider text-lime">${video.publishedAt.includes('T') ? formatDate(video.publishedAt) : video.publishedAt}</p><h3 class="mt-3 min-h-[3.5rem] font-semibold leading-6 text-white">${video.title}</h3><a class="mt-5 inline-flex items-center text-sm font-bold text-gray-300 transition hover:text-lime" href="${link}" target="_blank" rel="noreferrer">Ver en YouTube <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i></a></div></article>`;
+      }).join('');
+    }
+
+    async function loadLatestVideos() {
+      videoGrid.innerHTML = Array.from({ length: 3 }, () => '<div class="glass animate-pulse overflow-hidden rounded-xl"><div class="aspect-video bg-white/10"></div><div class="space-y-3 p-5"><div class="h-3 w-1/3 rounded bg-white/10"></div><div class="h-5 w-full rounded bg-white/10"></div><div class="h-4 w-1/2 rounded bg-white/10"></div></div></div>').join('');
+      try {
+        const endpoint = `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=3&type=video`;
+        const response = await fetch(endpoint);
+        if (!response.ok) throw new Error('YouTube API unavailable');
+        const data = await response.json();
+        const videos = data.items.map((item) => ({ id: item.id.videoId, title: item.snippet.title, publishedAt: item.snippet.publishedAt, thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.default.url }));
+        renderVideos(videos.length ? videos : fallbackVideos);
+      } catch (error) {
+        renderVideos(fallbackVideos);
+      }
+    }
+
+    document.querySelector('#menu-button').addEventListener('click', (event) => {
+      const menu = document.querySelector('#nav-menu');
+      const open = menu.classList.toggle('menu-open');
+      event.currentTarget.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', () => document.querySelector('#nav-menu').classList.remove('menu-open')));
+    document.querySelectorAll('.story-tab').forEach((tab) => {
+      tab.addEventListener('click', () => selectStory(tab.dataset.year));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStory(tab.dataset.year); }
+      });
+    });
+    document.querySelector('#contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.querySelector('#form-status').textContent = 'Mensaje preparado. ¡Gracias por escribir!';
+      event.currentTarget.reset();
+    });
+    loadLatestVideos();
+  </script>
+</body>
+</html>

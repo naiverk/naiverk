@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naiverk.com/sitemap.xml
