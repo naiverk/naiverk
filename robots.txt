@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://naiverk.com/sitemap.xml
+Sitemap: https://naiverk.vercel.app/sitemap.xml
