@@ -209,6 +209,34 @@
         if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStory(tab.dataset.year); }
       });
     });
+    const contactForm = document.querySelector('#contact-form');
+    const formStatus = document.querySelector('#form-status');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      submitButton.disabled = true;
+      formStatus.className = 'text-sm text-lime';
+      formStatus.textContent = 'Enviando mensaje...';
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' }
+        });
+        const result = await response.json();
+        if (!response.ok) {
+          const errors = result.errors?.map((error) => error.message).join(' ') || 'No se pudo enviar el mensaje.';
+          throw new Error(errors);
+        }
+        formStatus.textContent = 'Mensaje enviado. ¡Gracias por escribir!';
+        contactForm.reset();
+      } catch (error) {
+        formStatus.className = 'text-sm text-red-400';
+        formStatus.textContent = error.message || 'No se pudo enviar el mensaje. Inténtalo de nuevo.';
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
     loadLatestVideos();
   </script>
 </body>
